@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Coordinator.swift
 //  VKCloneWithCoordinator
 //
 //  Created by Denis Kazarin on 27.11.2021.

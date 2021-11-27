@@ -8,7 +8,31 @@
 import SwiftUI
 
 struct TabbarView: View {
+    
+    var model: LoginModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            FriendsView(model: FriendsViewModel(VKAPIService(loginModel: model)))
+                .navigationBarTitle("Friends", displayMode: .inline)
+                .tabItem {
+                    Label("Friends", systemImage: "person.3")
+                }
+                .tag(1)
+            
+            GroupsView(model: GroupsViewModel(VKAPIService(loginModel: model)))
+                .navigationBarTitle("Groups", displayMode: .inline)
+                .tabItem {
+                    Label("Groups", systemImage: "squares.below.rectangle")
+                }
+                .tag(2)
+            
+            NewsView(model: NewsViewModel(VKAPIService(loginModel: model)))
+                .navigationBarTitle("News", displayMode: .inline)
+                .tabItem {
+                    Label("News", systemImage: "list.bullet")
+                }
+                .tag(3)
+        }.navigationBarBackButtonHidden(true)
     }
 }
