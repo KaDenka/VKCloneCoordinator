@@ -21,15 +21,15 @@ struct PhotosResponse: Codable {
 // MARK: - Item
 struct PhotoItem: Codable {
     let date: Int
-    let urls: [Photo]
+    let photoDataItems: [SizesAndUrls]
 
     enum CodingKeys: String, CodingKey {
         case date
-        case urls = "sizes"
+        case photoDataItems = "sizes"
     }
 }
 
 // MARK: - Size
-struct Photo: Codable {
+struct SizesAndUrls: Codable {
     let url: String
 }

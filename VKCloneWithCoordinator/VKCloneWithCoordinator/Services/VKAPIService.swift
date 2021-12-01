@@ -86,7 +86,6 @@ class VKAPIService {
     }
     
     func photosCollectionRequest(_ completion: @escaping (PhotosCollection?) -> ()) {
-        //var collection: [Photo] = []
         let photosGetUrl = baseUrl + "method/photos.get"
         let parameters: Parameters = [
             "user_id": loginModel.userID,
@@ -106,10 +105,6 @@ class VKAPIService {
                     do {
                         let photos = try jsonDecoder.decode(PhotosCollection.self, from: data)
                         completion(photos)
-                        //                        for photo in photosItems {
-                        //                            collection.append(photo.urls.first!)
-                        //                        }
-                        //                        completion(collection)
                     } catch let error {
                         print(error.localizedDescription)
                         

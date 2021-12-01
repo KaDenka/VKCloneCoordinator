@@ -24,6 +24,7 @@ struct FriendsView: View {
                 FriendCell(friend: friend, isPhotoButtonSelected: $shouldShowPhotoCollection)
             }.navigationBarTitle(Text("Friends"))
         }
+       
         .onAppear {
             model.friendsRequest()
         }

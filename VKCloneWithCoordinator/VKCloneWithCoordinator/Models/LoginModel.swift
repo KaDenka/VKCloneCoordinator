@@ -20,6 +20,4 @@ class LoginModel: ObservableObject {
     @Published var isLogedIn: Bool = false
     @Published var userID: String = ""
     @Published var authToken: String = ""
-    
-    
 }

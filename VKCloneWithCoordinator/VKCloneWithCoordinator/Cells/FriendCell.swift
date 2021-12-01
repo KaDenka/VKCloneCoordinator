@@ -24,7 +24,6 @@ struct FriendCell: View {
             .scaleEffect(isAnimationOn ? 1.2 : 1)
             .animation(.spring(response: 0.5, dampingFraction: 0.2, blendDuration: 0.4))
             
-            
             VStack(alignment: .leading) {
                 Text("\(friend.firstName) \(friend.lastName)")
                     .font(.subheadline)
@@ -47,7 +46,7 @@ struct FriendCell: View {
                 
 
             } label: {
-                Text("Photo")
+                Text("")
                     .font(.subheadline)
                     .foregroundColor(.blue)
                     .padding(.leading, 30)
