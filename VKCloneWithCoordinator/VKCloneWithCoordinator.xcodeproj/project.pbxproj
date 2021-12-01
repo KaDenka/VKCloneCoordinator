@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA20D67927576976004912F1 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20D67827576976004912F1 /* PhotoViewModel.swift */; };
+		CA20D6972757A1C8004912F1 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20D6962757A1C8004912F1 /* PhotoCell.swift */; };
 		CA51EFB0275232220083D95D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51EFAF275232220083D95D /* AppDelegate.swift */; };
 		CA51EFB2275232220083D95D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51EFB1275232220083D95D /* SceneDelegate.swift */; };
 		CA51EFB4275232220083D95D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51EFB3275232220083D95D /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		CA20D67827576976004912F1 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		CA20D6962757A1C8004912F1 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		CA51EFAC275232220083D95D /* VKCloneWithCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKCloneWithCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA51EFAF275232220083D95D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA51EFB1275232220083D95D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				CA51F00127524E4C0083D95D /* FriendCell.swift */,
 				CA51F00827525A730083D95D /* GroupCell.swift */,
 				CA51F00A27525AFD0083D95D /* NewsCell.swift */,
+				CA20D6962757A1C8004912F1 /* PhotoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				CA51EFF7275249E40083D95D /* DateLoader.swift in Sources */,
 				CA51EFEA275249770083D95D /* GroupsView.swift in Sources */,
 				CA51EFE12752489E0083D95D /* Photo.swift in Sources */,
+				CA20D6972757A1C8004912F1 /* PhotoCell.swift in Sources */,
 				CA51EFDD275248910083D95D /* Friend.swift in Sources */,
 				CA51EFFA27524C0D0083D95D /* UIImageExtension.swift in Sources */,
 				CA51F00927525A730083D95D /* GroupCell.swift in Sources */,

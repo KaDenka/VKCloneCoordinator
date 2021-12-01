@@ -26,8 +26,10 @@ class PhotoViewModel: ObservableObject {
         }
         
         for photoItem in photoItems {
-            let items = photoItem.photoDataItems
-            for item in items {
+//            let item = photoItem.photoDataItems.first
+//            guard let url = item?.url else { return }
+//            photoStringURLs.append(url)
+            for item in photoItem.photoDataItems {
                 let url = item.url
                 photoStringURLs.append(url)
             }
