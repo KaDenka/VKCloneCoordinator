@@ -12,9 +12,11 @@ struct PhotoView: View {
     @ObservedObject var model: PhotoViewModel
     
     let columns = [
-        GridItem(.flexible(minimum: 50, maximum: .infinity)),
-        GridItem(.flexible(minimum: 50, maximum: .infinity))
+        GridItem(.adaptive(minimum: .infinity, maximum: .infinity)),
+        GridItem(.adaptive(minimum: .infinity, maximum: .infinity))
     ]
+    
+   
     
     init(model: PhotoViewModel) {
         self.model = model
@@ -28,15 +30,17 @@ struct PhotoView: View {
                     LazyVGrid(columns: columns, alignment: .center, spacing: 20, content: {
                         ForEach(model.photos) { photo in
                             PhotoCell(photo: photo)
-                                .frame(height: geometry.size.width/2)
+                                .frame(width: geometry.size.width, height: geometry.size.height/2)
                         }
                     })
                 }
-                .onAppear {
-                    model.photoRequest()
-                }
+                
+            }
+            .onAppear {
+                model.photoRequest()
             }
             .navigationBarTitle(Text("Photos"))
+
         }
     }
 }

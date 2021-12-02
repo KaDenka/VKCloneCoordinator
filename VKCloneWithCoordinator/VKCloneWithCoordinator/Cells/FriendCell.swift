@@ -37,14 +37,12 @@ struct FriendCell: View {
             Button {
                 self.isAnimationOn = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                   
+
                     self.isAnimationOn = false
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.isPhotoButtonSelected = true
                 }
-                
-
             } label: {
                 Text("")
                     .font(.subheadline)

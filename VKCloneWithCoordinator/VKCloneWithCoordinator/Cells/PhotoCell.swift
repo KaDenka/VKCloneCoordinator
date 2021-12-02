@@ -11,8 +11,17 @@ struct PhotoCell: View {
     
     let photo: UIImage
     
+    init(photo: UIImage) {
+        self.photo = photo
+    }
+    
     var body: some View {
-        Image(uiImage: photo)
-           
+        GeometryReader { proxy in
+            VStack{
+                Image(uiImage: photo)
+                    .frame(width: proxy.size.width, height: proxy.size.height)
+            }
+            
+        }
     }
 }

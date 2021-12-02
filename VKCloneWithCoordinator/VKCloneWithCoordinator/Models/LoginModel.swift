@@ -11,7 +11,7 @@ class LoginModel: ObservableObject {
     
     //MARK: VK verification data
     
-    @Published var appID = "8002682"
+    @Published var appID = "8015781"
     @Published var VKversion = "5.131"
     
     
