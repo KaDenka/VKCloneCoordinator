@@ -18,11 +18,10 @@ class ImageLoader {
         }
     }
     
-    func getPhotoCollection (_ photoCollection: [Photo]) -> [UIImage] {
+    func getPhotoCollection (_ photoCollection: [String]) -> [UIImage] {
         var uiImagesArray = [UIImage]()
-        
         for photo in photoCollection {
-            let image = self.getImage(photo.url)
+            let image = self.getImage(photo)
             uiImagesArray.append(image)
         }
         return uiImagesArray

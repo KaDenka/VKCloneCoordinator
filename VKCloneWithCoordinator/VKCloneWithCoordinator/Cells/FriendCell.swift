@@ -24,7 +24,6 @@ struct FriendCell: View {
             .scaleEffect(isAnimationOn ? 1.2 : 1)
             .animation(.spring(response: 0.5, dampingFraction: 0.2, blendDuration: 0.4))
             
-            
             VStack(alignment: .leading) {
                 Text("\(friend.firstName) \(friend.lastName)")
                     .font(.subheadline)
@@ -38,16 +37,14 @@ struct FriendCell: View {
             Button {
                 self.isAnimationOn = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                   
+
                     self.isAnimationOn = false
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.isPhotoButtonSelected = true
                 }
-                
-
             } label: {
-                Text("Photo")
+                Text("")
                     .font(.subheadline)
                     .foregroundColor(.blue)
                     .padding(.leading, 30)

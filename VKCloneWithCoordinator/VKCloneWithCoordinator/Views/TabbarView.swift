@@ -33,6 +33,12 @@ struct TabbarView: View {
                     Label("News", systemImage: "list.bullet")
                 }
                 .tag(3)
+            PhotoView(model: PhotoViewModel(VKAPIService(loginModel: model)))
+                .navigationBarTitle("Photos", displayMode: .inline)
+                .tabItem {
+                    Label("Photos", systemImage: "photo")
+                }
+                .tag(4)
         }.navigationBarBackButtonHidden(true)
     }
 }
